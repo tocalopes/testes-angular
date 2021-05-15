@@ -29,8 +29,14 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome','Firefox'],
+    browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    customLaunchers: {
+      FirefoxSemCabeca:{
+        base: 'Firefox',
+        flags : ['-headless']
+      }
+    }
   });
 };
