@@ -34,9 +34,9 @@ module.exports = function (config) {
     singleRun: false,
     restartOnFileChange: true,
     customLaunchers: {
-      FirefoxSemCabeca:{
+      FirefoxSemCabeca: {
         base: 'Firefox',
-        flags : ['-headless']
+        flags: ['-headless']
       }
     }
   });
