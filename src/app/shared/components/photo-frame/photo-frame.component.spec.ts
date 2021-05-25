@@ -1,5 +1,5 @@
 import { PhotoFrameModule } from './photo-frame.module';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { PhotoFrameComponent } from './photo-frame.component';
 
@@ -22,7 +22,7 @@ describe(PhotoFrameComponent.name, () => {
 
     it(`#${PhotoFrameComponent.prototype.like.name}
         should trigger (@Output liked) once when called
-        multiple times within debounce time`, () => {
+        multiple times within debounce time`, fakeAsync (()=> {
             fixture.detectChanges();
             let times = 0;
             component.liked.subscribe(() => {
@@ -30,6 +30,21 @@ describe(PhotoFrameComponent.name, () => {
             })
             component.like();
             component.like();
+            tick(500) //Dá um daleay de 500 milissegundos na execução, junto com fakeAsyncs
             expect(times).toBe(1)
-    });
+    }));
+
+    it(`#${PhotoFrameComponent.prototype.like.name}
+        should trigger (@Output liked) two times when called outside 
+        debouncec time`, fakeAsync(() => {
+            fixture.detectChanges()
+            let times = 0
+            component.liked.subscribe(() => times++)
+            component.like()
+            tick(500)
+            component.like()
+            tick(500)
+            expect(times).toBe(2)
+        })
+    )
 })
