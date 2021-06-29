@@ -5,18 +5,9 @@ import { PhotoBoardComponent } from './photo-board.component';
 import { Photo } from './interfaces/photo';
 import { faOtter } from '@fortawesome/free-solid-svg-icons';
 import { SimpleInnerSubscriber } from 'rxjs/internal/innerSubscribe';
+import { buildPhotoList } from './test/build-photo-list';
 
-function buildPhotoList(): Photo[]{
-    const photos: Photo[] = [];
-    for(let i = 0; i < 8; i++){
-        photos.push({
-            id: i+1,
-            url: '',
-            description: ''
-        })
-    }
-    return photos
-}
+
 
 describe(PhotoBoardComponent.name, ()=> {
     let fixture: ComponentFixture<PhotoBoardComponent> = null;
