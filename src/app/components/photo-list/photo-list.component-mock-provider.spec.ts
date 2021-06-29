@@ -1,3 +1,4 @@
+import { PhotoBoardMockService } from './../../shared/components/photo-board/services/photo-board-mock.service';
 import { PhotoBoardService } from 'src/app/shared/components/photo-board/services/photo-board.service';
 import { PhotoListModule } from './photo-list.module';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
@@ -21,11 +22,7 @@ describe(PhotoListComponent.name + 'Mock provider', () => {
             providers: [
                 {
                     provide: PhotoBoardService,
-                    useValue: {
-                        getPhotos(): Observable<Photo[]>{
-                            return of(buildPhotoList())
-                        }
-                    }
+                    useClass: PhotoBoardMockService
                 }
             ]
         }).compileComponents();
