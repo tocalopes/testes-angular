@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { ActionDirective } from "./action.directive";
 import { Component } from '@angular/core';
 import { faTintSlash } from '@fortawesome/free-solid-svg-icons';
+import { By } from '@angular/platform-browser';
 
 describe(ActionDirective.name, () => {
 
@@ -20,7 +21,10 @@ describe(ActionDirective.name, () => {
     })
 
     it(`(D) (@Outputo appAction) should emit event with payload when ENTER key is pressed`, () => {
-        const divEl = fixture.nativeElement.querySelector('.dummy-component');
+        
+        // fixture.debugElement.nativeElement 
+        // const divEl = fixture.nativeElement.querySelector('.dummy-component');
+        const divEl = fixture.debugElement.query(By.directive(ActionDirective)).nativeElement;
         const event = new KeyboardEvent('keyup', {key: 'Enter'});
         divEl.dispatchEvent(event);
         expect(component.hasEvent()).toBeTrue()
