@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<testsuite name="Firefox 88.0 (Ubuntu 0.0.0)" package="" timestamp="2021-05-25T15:38:21" id="0" hostname="lopes-Aspire-A515-54G" tests="15" errors="0" failures="0" time="0.228">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"/>
+  </properties>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should not generate duplicate IDs when called multiple times" time="0.055" classname="Firefox_88_0_(Ubuntu_0_0_0).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0" classname="Firefox_88_0_(Ubuntu_0_0_0).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0.001" classname="Firefox_88_0_(Ubuntu_0_0_0).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;    should return the number of generatedIds when called" time="0.001" classname="Firefox_88_0_(Ubuntu_0_0_0).UniqueIdService"/>
+  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.047" classname="Firefox_88_0_(Ubuntu_0_0_0).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.012" classname="Firefox_88_0_(Ubuntu_0_0_0).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.012" classname="Firefox_88_0_(Ubuntu_0_0_0).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.012" classname="Firefox_88_0_(Ubuntu_0_0_0).LikeWidgetComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should update aria-label  when (@Input likes) is incremented" time="0.017" classname="Firefox_88_0_(Ubuntu_0_0_0).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #Should display number of likes when (@Input likes) is incremented" time="0.015" classname="Firefox_88_0_(Ubuntu_0_0_0).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;        should trigger (@Output liked) two times when called outside &#xA;        debouncec time" time="0.014" classname="Firefox_88_0_(Ubuntu_0_0_0).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;        should trigger (@Output liked) once when called&#xA;        multiple times within debounce time" time="0.01" classname="Firefox_88_0_(Ubuntu_0_0_0).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should have aria-label whith 0 (@Input likes)" time="0.008" classname="Firefox_88_0_(Ubuntu_0_0_0).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display image with src and description when boun to properties" time="0.013" classname="Firefox_88_0_(Ubuntu_0_0_0).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent Should create component" time="0.011" classname="Firefox_88_0_(Ubuntu_0_0_0).PhotoFrameComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
